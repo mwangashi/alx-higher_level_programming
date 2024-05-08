@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""Difirne a locked class"""
+"""This creates a class that prevents dynamic attributes"""
 
-    class LockedClass:
-    """
-    Prevent the user from initiating a new locked class 
-    except if the new instance attribute is called first_name.
-    """
 
-    _slots_ = ['first_name']
+class LockedClass:
+    """This object prevents dynamic attribute"""
+
+    __slots__ = ['first_name']
